@@ -22,6 +22,8 @@ public class Autor {
 	
 	private Date nascimento;
 	
+	private String nacionalidade;
+	
 	@OneToMany(mappedBy = "autor")
 	@JsonIgnore
 	private List<Livro> livros;
@@ -56,6 +58,14 @@ public class Autor {
 
 	public void setLivros(List<Livro> livros) {
 		this.livros = livros;
+	}
+
+	public String getNacionalidade() {
+		return nacionalidade;
+	}
+
+	public void setNacionalidade(String nacionalidade) {
+		this.nacionalidade = nacionalidade;
 	}
 	
 }
